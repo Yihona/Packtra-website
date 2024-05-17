@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipment Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Shipment Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="index.html">Shipment Management</a></li>
+                <li><a href="archive.html">Archive</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Tracking Form Section -->
+        <section class="tracking-form">
+            <h2>Track Your Shipment</h2>
+            <form id="track-form" onsubmit="return trackShipment()">
+                <label for="tracking-number">Enter Tracking Number:</label>
+                <input type="text" id="tracking-number" name="tracking-number" required>
+                <button type="submit">Track</button>
+            </form>
+        </section>
+        
+        <!-- Shipment Details Section -->
+        <section class="shipment-details" id="shipment-details">
+            <h2>Shipment Details</h2>
+            <div id="details-content">
+                <!-- Shipment details will be displayed here -->
+            </div>
+        </section>
+
+        <!-- Register Shipment Section -->
+        <section class="register-shipment">
+            <h2>Register New Shipment</h2>
+            <form id="register-form" onsubmit="return registerShipment()">
+                <label for="origin">Origin:</label>
+                <input type="text" id="origin" name="origin" required>
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" required>
+                <label for="estimated-delivery">Estimated Delivery Date:</label>
+                <input type="date" id="estimated-delivery" name="
+estimated-delivery" required>
+                
+                <label for="file-upload-1">Upload File:</label>
+                <input type="file" id="file-upload-1" name="file-upload-1">
+                <div id="file-upload-container"></div>
+                <button type="button" onclick="addFileInput()">Add Another File</button>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <!-- Generate Report Section -->
+        <section class="generate-report">
+            <h2>Generate Shipment Report</h2>
+            <form id="report-form" onsubmit="return generateReport()">
+                <label for="client-email">Client Email:</label>
+                <input type="email" id="client-email" name="client-email" required>
+                <button type="submit">Generate Report</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 PACKTRA PLC. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

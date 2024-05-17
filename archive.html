@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipment Archive</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Shipment Archive</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="index.html">Shipment Management</a></li>
+                <li><a href="archive.html">Archive</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="search-shipment">
+            <h2>Search Shipment</h2>
+            <form id="search-form" onsubmit="return searchShipment()">
+                <label for="operation-number">Enter Operation Number:</label>
+                <input type="text" id="operation-number" name="operation-number" required>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+        
+        <section class="shipment-details" id="archive-details">
+            <h2>Shipment Details</h2>
+            <div id="archive-details-content">
+                <!-- Archived shipment details will be displayed here -->
+            </div>
+        </section>
+   
+    </main>
+    <footer>
+        <p>&copy; 2024 PACKTRA PLC. All rights reserved.</p>
+    </footer>
+    <script src="archive.js"></script>
+</body>
+</html>
